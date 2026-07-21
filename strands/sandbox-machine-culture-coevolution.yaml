@@ -1,0 +1,170 @@
+# Path: /lpms/oe-interdisciplinary-k12/strands/sandbox-machine-culture-coevolution.yaml
+# Branch: sandbox/machine-culture-coevolution (OE-SANDBOX-LPM-000004, RFC-0010)
+#
+# A 9-12 capstone on machine culture and human-AI coevolution, grounded in
+# Brinkmann, L., Baumann, F., Bonnefon, J.F., Derex, M., Muller, T.F.,
+# Nussberger, A.M., Czaplicka, A., Acerbi, A., Griffiths, T.L., Henrich, J.,
+# Leibo, J.Z., McElreath, R., Oudeyer, P.Y., Stray, J., & Rahwan, I. (2023).
+# "Machine culture." Nature Human Behaviour, 7(11), 1855-1868. Real,
+# verified citation (2026-07-21) -- note Richard McElreath (MPI-EVA's
+# Human Behavior, Ecology and Culture director, also central to
+# OE-SANDBOX-LPM-000003) is a co-author, a genuine cross-institution bridge
+# between this fork and the MPI-EVA capstone fork, not a forced connection.
+
+id: "OE-SANDBOX-STRAND-000013"
+type: "oe:Strand"
+sandboxMeta:
+  created: "2026-07-21"
+  expiresOn: "2027-07-21"
+  status: active
+version: 0.1.0
+labels:
+  en: "Machine Culture and Human-AI Coevolution Capstone"
+description:
+  en: >
+    Capstone Strand treating AI systems as potential participants in
+    cultural evolution's variation/transmission/selection dynamics
+    (Brinkmann et al. 2023), not merely as tools culture passes through.
+    Reinforces trunk Strand 1's Selection and Innovation, Strand 2's
+    Agency and Niche Construction, and Strand 3's Culture, Technology,
+    Collective Intelligence, and Distributed Cognition throughout —
+    the same three trunk strands OE-STRAND-000224/000234 already draw
+    on, but with the AI/culture claim grounded in a real, checkable
+    research citation instead of a parenthetical example (addressing
+    the Selection cross-domain case study's finding that OE-STRAND-000224
+    is under-cited against AI4K12).
+typicalGradeBand: "9-12"
+associatedDomains: ["Computer Science", "Social Studies", "Biology"]
+relations:
+  foundationalTo: ["OE-STRAND-000224", "OE-STRAND-000234"]
+
+subStrands:
+
+  - id: "OE-SANDBOX-STRAND-000014"
+    type: "oe:SubStrand"
+    sandboxMeta:
+      created: "2026-07-21"
+      expiresOn: "2027-07-21"
+      status: active
+    version: 0.1.0
+    labels:
+      en: "AI Systems as Participants in Cultural Evolution"
+    typicalGradeBand: "9-12"
+    required: false
+    associatedDomains: ["Computer Science", "Social Studies"]
+    contextAssumption: [rich-scaffolding]
+    concepts:
+      - id: "OE-SANDBOX-CONCEPT-000005"   # Machine Culture
+        emphasis: primary
+      - id: "OE-SANDBOX-CONCEPT-000006"   # Hybrid Social Learning
+        emphasis: primary
+      - id: "OE-CONCEPT-000223"   # Collective Intelligence (cross-ref Strand 3)
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000224"   # Distributed Cognition (cross-ref Strand 3)
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000218"   # Technology (cross-ref Strand 3)
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000213"   # Selection (cross-ref Strand 1)
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000204"   # Innovation (cross-ref Strand 1)
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000211"   # Agency (cross-ref Strand 2)
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000209"   # Niche Construction (cross-ref Strand 2)
+        emphasis: reinforcing
+    performanceIndicators:
+      - "Explains, citing Brinkmann et al. (2023) 'Machine culture,' the
+         difference between AI as a passive channel culture is transmitted
+         through (e.g. a printing press) and AI as an active participant
+         that itself shapes variation, transmission, or selection among
+         cultural variants (e.g. a recommendation system whose outputs
+         change what content gets created next, which then retrains the
+         system)."
+      - "Analyzes a real or realistic case of a human-AI feedback loop
+         (e.g. a language model trained partly on text that earlier
+         language models helped generate) using Selection and Innovation
+         from Strand 1: which step introduces variation, and which step
+         is a selection-like filtering process, and who or what is doing
+         the filtering."
+      - "Distinguishes AI4K12 Big Idea 3's reinforcement-learning framing
+         (trial-and-error narrowing toward better-performing actions within
+         one training run, OE-COMPETENCY-000401) from Selection as a
+         population-level, cross-generational process (Strand 1) — the
+         same distinction the Selection cross-domain case study identifies
+         as AI4K12's actual closest content, used here explicitly rather
+         than left implicit."
+      - "Evaluates, using AI4K12 Big Idea 5's ethical-AI framing
+         (OE-COMPETENCY-000514) rather than Big Idea 4's philosophy-of-mind
+         framing (OE-COMPETENCY-000504), a case where a designed AI system
+         produces emergent, non-designed collective effects on a
+         population's shared information environment — the same
+         recommendation-algorithm example trunk OE-STRAND-000224 uses,
+         now anchored to the Big Idea the Selection case study identified
+         as the better fit."
+      - "[Hybrid Social Learning] Analyzes a case of humans and an AI
+         tutoring or recommendation system jointly shaping each other's
+         subsequent behavior over repeated interactions, using Distributed
+         Cognition (Strand 3) to describe how the resulting
+         knowledge/behavior is not fully located in either the human or
+         the system alone."
+
+    # ========================================================================
+    # Self-referential closing case study: OECB's own sandbox-LPM-forking
+    # mechanism (RFC-0010) as a worked example. Framed carefully, per
+    # RFC-0010's own framing-note discipline, as an illustrative analogy
+    # for classroom discussion -- not a claim that curriculum governance
+    # is scientifically equivalent to the biological or cultural
+    # evolutionary processes studied elsewhere in this Strand.
+    # ========================================================================
+    extensions:
+      "oe:phase1.instructionalNote":
+        en: >
+          Optional closing activity (not a performance indicator, an
+          instructional note): have students examine RFC-0010 and the four
+          sandbox-tier forks it produced (including this one) as a live
+          case. A curriculum model (an LPM) was "forked" into several
+          variants under an explicit governance rule; each variant will
+          either be archived, left as-is, or promoted to permanent status
+          through review. Ask students to identify which elements of this
+          process are genuinely analogous to variation-selection-retention
+          dynamics discussed earlier in this Strand (a fork does introduce
+          real variation; promotion review is a real retention filter) and
+          which are not (promotion is a deliberate human editorial decision,
+          not blind selection; forks do not reproduce or compete for a
+          finite resource pool the way biological or memetic variants can).
+          This mirrors RFC-0010's own explicit caution against over-reading
+          its VSR framing as more than design inspiration.
+
+    # ========================================================================
+    # Trajectory variant (RFC-0009): minimal-prior-exposure — does not
+    # assume trunk Strand 3's Collective Intelligence/Distributed Cognition
+    # or AI4K12 content was reliably covered beforehand.
+    # ========================================================================
+    trajectoryVariants:
+      - id: "OE-SANDBOX-STRAND-000015"
+        type: "oe:SubStrand"
+        sandboxMeta:
+          created: "2026-07-21"
+          expiresOn: "2027-07-21"
+          status: active
+        version: 0.1.0
+        labels:
+          en: "AI Systems as Participants in Cultural Evolution (Guided Path)"
+        typicalGradeBand: "9-12"
+        associatedDomains: ["Computer Science", "Social Studies"]
+        contextAssumption: [minimal-prior-exposure]
+        concepts:
+          - id: "OE-SANDBOX-CONCEPT-000005"   # Machine Culture
+            emphasis: primary
+          - id: "OE-CONCEPT-000213"   # Selection
+            emphasis: reinforcing
+        performanceIndicators:
+          - "Given a short, concrete walkthrough of one human-AI feedback
+             loop example (e.g. a music-recommendation app), identifies in
+             guided discussion where 'something new is introduced' and
+             where 'something gets favored or filtered' happen in the
+             loop, before analyzing a second example independently."
+          - "Given AI4K12's reinforcement-learning framing explained in
+             plain terms first, compares it to a single labeled example of
+             biological or cultural Selection already covered in Strand 1,
+             rather than being asked to derive the distinction unaided."

@@ -1,37 +1,45 @@
 # ============================================================================
-# Path: /lpms/oe-interdisciplinary-k12/lpm.yaml
+# Path: /lpms/oe-interdisciplinary-k12/lpm.yaml   (branch: sandbox/machine-culture-coevolution)
 # ============================================================================
-# Design intent: A K-12 progression using ONLY OE-INTERDISCIPLINARY-v1.0.0,
-# which already contains Agency, Niche Construction, and a multiply-defined
-# Selection concept (biology/culture/education/ai framings). This produces
-# a progression structurally capable of integrated causal reasoning across
-# domains — a direct consequence of the richer vocabulary, not an added
-# instructional layer. Vertical coherence is built per strand across grade
-# bands; horizontal coherence operates BOTH within a strand (as in LPM A)
-# AND between the three strands, since each strand deliberately reinforces
-# concepts "owned" by the other two (e.g., Strand 2's Agency reinforces
-# Strand 1's Selection; Strand 3's Culture reinforces Strand 1's Transmission).
+# OE-SANDBOX-LPM-000004 — sandbox-tier fork of OE-LPM-000002 (RFC-0010).
+# Adds a 9-12 capstone Strand on machine culture and human-AI coevolution,
+# grounded in the real research program of the Center for Humans and
+# Machines (Max Planck Institute for Human Development, Berlin — a
+# different institute from MPI-EVA/OE-SANDBOX-LPM-000003, worth being
+# precise about) — specifically Brinkmann, Rahwan, and colleagues' 2023
+# Nature Human Behaviour paper "Machine culture." Addresses the Selection
+# cross-domain case study's finding that trunk OE-STRAND-000224 asserts an
+# AI/agency analogy with real citation gaps, by grounding this fork's
+# claims in an actual, checkable AI-and-culture research paper rather than
+# a parenthetical example.
 # ============================================================================
 
-id: OE-LPM-000002
+id: "OE-SANDBOX-LPM-000004"
 type: "oe:LPM"
-status: proposed
+sandboxMeta:
+  created: "2026-07-21"
+  expiresOn: "2027-07-21"
+  status: active
+forkedFrom: "OE-LPM-000002"
 version: 0.1.0
 
 labels:
-  en: "OE-Interdisciplinary K-12 Evolutionary & Cultural Systems Learning Progression"
+  en: "OE-Interdisciplinary: Machine Culture and Human-AI Coevolution Capstone"
 
 description:
   en: >
-    A K-12 learning progression spanning biological, cultural, developmental,
-    and technological domains, using the OE-INTERDISCIPLINARY controlled
-    vocabulary exclusively. Organized around three strands — inheritance/
-    variation/selection across systems, agency/development/niche construction,
-    and culture/technology/collective systems — designed so that a small set
-    of cross-domain concepts (Selection, Agency, Transmission, Niche
-    Construction) recur across biological, social-studies, and technology
-    contexts from K through 12, developing transferable causal reasoning
-    rather than single-discipline content mastery alone.
+    A sandbox fork of oe-interdisciplinary-k12 adding a 9-12 capstone
+    Strand on machine culture — cases where AI systems participate in,
+    rather than merely transmit, the variation/transmission/selection
+    dynamics of cultural evolution (Brinkmann et al. 2023). Includes an
+    explicitly self-referential closing case study: OECB's own
+    RFC-0010 sandbox-LPM-forking mechanism, examined as a worked
+    example of curriculum models undergoing the same kind of
+    variation-and-selective-retention dynamic the Strand's academic
+    content describes — framed carefully as an illustrative analogy,
+    not a claim that curriculum governance is scientifically equivalent
+    to biological or cultural evolution (see RFC-0010's own framing-note
+    discipline on this point).
 
 authors:
   - name: "OpenEvo Computational Curriculum Studies Working Group"
@@ -39,7 +47,7 @@ authors:
 license: "CC-BY-NC-SA-4.0"
 
 conceptbase:
-  ontology: "OE-ONTOLOGY-v1.0.0"
+  ontology: "OE-ONTOLOGY-v1.5.0"
   vocabularies:
     - "OE-INTERDISCIPLINARY-v1.0.0"
 
@@ -56,3 +64,7 @@ strands:
     repository: "lpms/oe-interdisciplinary-k12/strands/strand-203-culture-technology-collective.yaml"
     required: true
     sequence: 3
+  - id: "OE-SANDBOX-STRAND-000013"
+    repository: "lpms/oe-interdisciplinary-k12/strands/sandbox-machine-culture-coevolution.yaml"
+    required: false
+    sequence: 4
