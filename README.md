@@ -36,4 +36,4 @@ python scripts/validate.py schemas/strand.schema.yaml ../oe-interdisciplinary-k1
 
 ## License
 
-`lpm.yaml` declares this LPM's content as `CC-BY-NC-SA-4.0`, matching the `OE-INTERDISCIPLINARY-v1.0.0` vocabulary it's built on (see OECB [RFC-0004](https://github.com/openevo-ccs/conceptbase/blob/main/proposals/0004-relicense-content-cc-by-nc-sa.md)). **Known gap:** the repository's own top-level [`LICENSE`](LICENSE) file is still the GitHub-default MIT text, which doesn't match — worth a deliberate fix (likely replacing it with the same CC-BY-NC-SA-4.0 text OECB uses, since this repo is pure curriculum content, not code) rather than carrying two contradictory license statements.
+[CC-BY-NC-SA-4.0](LICENSE), matching the `OE-INTERDISCIPLINARY-v1.0.0` vocabulary this LPM is built on (see OECB [RFC-0004](https://github.com/openevo-ccs/conceptbase/blob/main/proposals/0004-relicense-content-cc-by-nc-sa.md)).
