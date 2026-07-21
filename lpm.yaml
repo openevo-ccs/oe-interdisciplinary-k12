@@ -1,37 +1,55 @@
 # ============================================================================
-# Path: /lpms/oe-interdisciplinary-k12/lpm.yaml
+# Path: /lpms/oe-interdisciplinary-k12/lpm.yaml   (branch: sandbox/mpi-eva-capstone)
 # ============================================================================
-# Design intent: A K-12 progression using ONLY OE-INTERDISCIPLINARY-v1.0.0,
-# which already contains Agency, Niche Construction, and a multiply-defined
-# Selection concept (biology/culture/education/ai framings). This produces
-# a progression structurally capable of integrated causal reasoning across
-# domains — a direct consequence of the richer vocabulary, not an added
-# instructional layer. Vertical coherence is built per strand across grade
-# bands; horizontal coherence operates BOTH within a strand (as in LPM A)
-# AND between the three strands, since each strand deliberately reinforces
-# concepts "owned" by the other two (e.g., Strand 2's Agency reinforces
-# Strand 1's Selection; Strand 3's Culture reinforces Strand 1's Transmission).
+# OE-SANDBOX-LPM-000003 — sandbox-tier fork of OE-LPM-000002 (RFC-0010).
+# Adds a 9-12 capstone Strand explicitly organized around the real
+# departmental structure of the Max Planck Institute for Evolutionary
+# Anthropology (Leipzig): Archaeogenetics, Comparative Cultural
+# Psychology, Evolutionary Genetics, Human Behavior/Ecology/Culture,
+# Human Origins, Linguistic and Cultural Evolution, and Primate Behavior
+# and Evolution. Unlike trunk oe-interdisciplinary-k12 (single-vocabulary
+# by design), this fork's manifest deliberately pins BOTH BIO-CORE and
+# OE-INTERDISCIPLINARY — a genuine cross-vocabulary integration, not a
+# copy of trunk content, reusing BIO-CORE's Hominin/Ancient DNA/Phylogeny
+# alongside OE-INTERDISCIPLINARY's Culture/Agency/Cooperation.
+#
+# This fork is also where the Agency definitional drift the Selection
+# and human-dimensions case studies both flag — OE-CONCEPT-000211's
+# formal "act intentionally" vs. strand-202's own "without requiring
+# conscious intention" restatement — is resolved *for this fork's
+# content specifically*: every performance indicator below uses the
+# deflationary, cross-species-applicable framing consistently, without
+# editing the underlying vocabulary entry (pluralism is preserved at the
+# vocabulary level; this fork just picks one coherent operative reading
+# rather than drifting between two).
 # ============================================================================
 
-id: OE-LPM-000002
+id: "OE-SANDBOX-LPM-000003"
 type: "oe:LPM"
-status: proposed
+sandboxMeta:
+  created: "2026-07-21"
+  expiresOn: "2027-07-21"
+  status: active
+forkedFrom: "OE-LPM-000002"
 version: 0.1.0
 
 labels:
-  en: "OE-Interdisciplinary K-12 Evolutionary & Cultural Systems Learning Progression"
+  en: "OE-Interdisciplinary: MPI-EVA Cross-Disciplinary Capstone"
 
 description:
   en: >
-    A K-12 learning progression spanning biological, cultural, developmental,
-    and technological domains, using the OE-INTERDISCIPLINARY controlled
-    vocabulary exclusively. Organized around three strands — inheritance/
-    variation/selection across systems, agency/development/niche construction,
-    and culture/technology/collective systems — designed so that a small set
-    of cross-domain concepts (Selection, Agency, Transmission, Niche
-    Construction) recur across biological, social-studies, and technology
-    contexts from K through 12, developing transferable causal reasoning
-    rather than single-discipline content mastery alone.
+    A sandbox fork of oe-interdisciplinary-k12 adding a 9-12 capstone
+    Strand organized around the real research-department structure of
+    the Max Planck Institute for Evolutionary Anthropology, Leipzig —
+    evolutionary genetics, archaeogenetics, language evolution,
+    behavioral ecology, comparative cognition, cross-cultural
+    developmental psychology, and human origins/archaeology. Pins both
+    BIO-CORE-v1.0.0 and OE-INTERDISCIPLINARY-v1.0.0, demonstrating real
+    cross-vocabulary reuse rather than treating the two as sealed
+    silos. See OE-SANDBOX-LPM-000001/000002 (bio-core-k12's sibling
+    forks on the same empirical territory, framed strictly
+    non-agentically) for the direct "synergistic, not opposed"
+    comparison the human-dimensions case study calls for.
 
 authors:
   - name: "OpenEvo Computational Curriculum Studies Working Group"
@@ -39,9 +57,10 @@ authors:
 license: "CC-BY-NC-SA-4.0"
 
 conceptbase:
-  ontology: "OE-ONTOLOGY-v1.0.0"
+  ontology: "OE-ONTOLOGY-v1.5.0"
   vocabularies:
     - "OE-INTERDISCIPLINARY-v1.0.0"
+    - "BIO-CORE-v1.0.0"
 
 strands:
   - id: "OE-STRAND-000201"
@@ -56,3 +75,7 @@ strands:
     repository: "lpms/oe-interdisciplinary-k12/strands/strand-203-culture-technology-collective.yaml"
     required: true
     sequence: 3
+  - id: "OE-SANDBOX-STRAND-000010"
+    repository: "lpms/oe-interdisciplinary-k12/strands/sandbox-mpi-eva-capstone.yaml"
+    required: false
+    sequence: 4

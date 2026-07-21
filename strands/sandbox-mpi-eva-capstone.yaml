@@ -1,0 +1,164 @@
+# Path: /lpms/oe-interdisciplinary-k12/strands/sandbox-mpi-eva-capstone.yaml
+# Branch: sandbox/mpi-eva-capstone (OE-SANDBOX-LPM-000003, RFC-0010)
+#
+# A 9-12 capstone organized around the real seven-department structure of
+# the Max Planck Institute for Evolutionary Anthropology (Leipzig), as a
+# genuine cross-vocabulary integration (BIO-CORE + OE-INTERDISCIPLINARY)
+# rather than a single-discipline treatment. Every performance indicator
+# below is tagged to the specific MPI-EVA department whose actual research
+# focus it draws on, verified via web search 2026-07-21 (not fabricated):
+# Archaeogenetics (Krause), Comparative Cultural Psychology (Haun),
+# Evolutionary Genetics, Human Behavior/Ecology/Culture (McElreath),
+# Human Origins (Kivell), Linguistic and Cultural Evolution (Gray),
+# Primate Behavior and Evolution (Tung).
+
+id: "OE-SANDBOX-STRAND-000010"
+type: "oe:Strand"
+sandboxMeta:
+  created: "2026-07-21"
+  expiresOn: "2027-07-21"
+  status: active
+version: 0.1.0
+labels:
+  en: "MPI-EVA Cross-Disciplinary Capstone"
+description:
+  en: >
+    Capstone Strand demonstrating that trunk Strand 1/2/3's cross-domain
+    concepts (Selection, Agency, Niche Construction, Culture, Transmission)
+    are not an in-house invention but map onto a real, currently active
+    multi-department research institute's actual division of labor.
+    Reinforces trunk Strand 1 (Selection, Variation), Strand 2 (Agency,
+    Niche Construction, Development), and Strand 3 (Culture, Cooperation,
+    Transmission) throughout, plus cross-references BIO-CORE's Hominin,
+    Ancient DNA, and Phylogeny — a direct, checkable synergy with
+    bio-core-k12's sibling forks (OE-SANDBOX-LPM-000001/000002) on the
+    same empirical territory.
+typicalGradeBand: "9-12"
+associatedDomains: ["Biology", "Social Studies", "Computer Science"]
+relations:
+  foundationalTo: ["OE-STRAND-000202", "OE-STRAND-000203"]
+
+subStrands:
+
+  - id: "OE-SANDBOX-STRAND-000011"
+    type: "oe:SubStrand"
+    sandboxMeta:
+      created: "2026-07-21"
+      expiresOn: "2027-07-21"
+      status: active
+    version: 0.1.0
+    labels:
+      en: "Seven Departments, One Question: How Did Humans Become Human?"
+    typicalGradeBand: "9-12"
+    required: false
+    associatedDomains: ["Biology", "Social Studies", "Computer Science"]
+    contextAssumption: [rich-scaffolding]
+    concepts:
+      - id: "OE-SANDBOX-CONCEPT-000003"   # Language Evolution
+        emphasis: primary
+      - id: "OE-SANDBOX-CONCEPT-000004"   # Comparative Cognition
+        emphasis: primary
+      - id: "OE-CONCEPT-000211"   # Agency (cross-ref Strand 2, tightened framing — see note below)
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000209"   # Niche Construction (cross-ref Strand 2)
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000219"   # Culture (cross-ref Strand 3)
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000207"   # Cooperation (cross-ref Strand 3)
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000203"   # Transmission (cross-ref Strand 1)
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000213"   # Selection (cross-ref Strand 1)
+        emphasis: reinforcing
+      - id: "OE-SANDBOX-CONCEPT-000001"   # Hominin (BIO-CORE cross-vocabulary reuse)
+        emphasis: reinforcing
+      - id: "OE-SANDBOX-CONCEPT-000002"   # Ancient DNA (BIO-CORE cross-vocabulary reuse)
+        emphasis: reinforcing
+      - id: "OE-CONCEPT-000113"   # Phylogeny (BIO-CORE cross-vocabulary reuse)
+        emphasis: reinforcing
+    performanceIndicators:
+      # Evolutionary Genetics + Archaeogenetics (Krause)
+      - "[Evolutionary Genetics / Archaeogenetics] Analyzes a real ancient-DNA
+         finding (e.g. evidence of Neanderthal or Denisovan admixture in
+         present-day human populations) as a case where genetic evidence and
+         cultural/behavioral inference must be evaluated against independent
+         lines of evidence, connecting to Strand 1's Selection and BIO-CORE's
+         Ancient DNA concept."
+      # Human Origins (Kivell)
+      - "Interprets hominin fossil evidence (skeletal morphology) as evidence
+         about behavior — e.g., what hand or foot bone structure implies
+         about tool use or locomotion — distinguishing what the fossil record
+         can and cannot directly tell us about behavior versus what requires
+         additional inference."
+      # Linguistic and Cultural Evolution (Gray)
+      - "[Language Evolution] Constructs a simple language family tree from
+         shared and divergent linguistic features and compares the method
+         directly to constructing a biological phylogeny (BIO-CORE's
+         Phylogeny concept), identifying what is genuinely analogous
+         (branching, common ancestry, gradual divergence) and what is not
+         (mechanism of transmission — biological inheritance vs. social
+         learning)."
+      # Human Behavior, Ecology and Culture (McElreath)
+      - "[Behavioral Ecology] Explains a documented human behavioral pattern
+         (e.g. a foraging or resource-sharing strategy in a specific
+         population) as a response shaped by ecological and social
+         conditions acting on the population over time — using Agency in
+         its deflationary sense (a capacity to regulate behavior toward a
+         goal-state, without requiring conscious intention or deliberate
+         planning by any individual), consistent with strand-202's own
+         restatement rather than OE-CONCEPT-000211's more mentalistic
+         'act intentionally' phrasing."
+      # Primate Behavior and Evolution (Tung) + Comparative Cultural
+      # Psychology (Haun)
+      - "[Comparative Cognition] Compares a specific cognitive or social
+         capacity (e.g. cooperative problem-solving, delayed gratification,
+         or social learning) across a non-human primate species, young
+         children from more than one cultural context, and adult humans,
+         identifying which differences appear species-general and which
+         appear culturally variable — directly reinforcing Strand 2's
+         Development and Strand 3's Culture."
+      # Cross-cutting: Niche Construction tying the departments together
+      - "Explains how human technological and cultural niche construction
+         (Strand 2) documented across multiple MPI-EVA departments —
+         genetic adaptation to agricultural diets, language diversification
+         following migration, culturally transmitted tool traditions —
+         jointly shaped, and were shaped by, hominin population history,
+         without treating any one department's evidence as sufficient on
+         its own."
+
+    # ========================================================================
+    # Trajectory variant (RFC-0009): minimal-prior-exposure — does not
+    # assume trunk Strand 2/3's Agency and Niche Construction content was
+    # reliably covered beforehand. Introduces the deflationary Agency
+    # framing explicitly before using it, rather than assuming it.
+    # ========================================================================
+    trajectoryVariants:
+      - id: "OE-SANDBOX-STRAND-000012"
+        type: "oe:SubStrand"
+        sandboxMeta:
+          created: "2026-07-21"
+          expiresOn: "2027-07-21"
+          status: active
+        version: 0.1.0
+        labels:
+          en: "Seven Departments, One Question (Guided Path)"
+        typicalGradeBand: "9-12"
+        associatedDomains: ["Biology", "Social Studies"]
+        contextAssumption: [minimal-prior-exposure]
+        concepts:
+          - id: "OE-SANDBOX-CONCEPT-000003"   # Language Evolution
+            emphasis: primary
+          - id: "OE-CONCEPT-000211"   # Agency
+            emphasis: primary
+          - id: "OE-SANDBOX-CONCEPT-000001"   # Hominin
+            emphasis: reinforcing
+        performanceIndicators:
+          - "Before analyzing any case, is given an explicit working
+             definition of Agency as used in this capstone ('a capacity to
+             regulate behavior toward a goal-state, without requiring
+             conscious intention') and practices applying it to a simple,
+             pre-worked example (e.g. an ant colony's foraging behavior)
+             before applying it to a human case."
+          - "Given a short, guided explanation of what a language family
+             tree shows, identifies which of two languages is more closely
+             related to a third, before constructing a tree independently."
