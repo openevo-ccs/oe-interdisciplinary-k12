@@ -1,0 +1,48 @@
+name: Validate against OECB schemas
+
+# Checks out openevo-ccs/conceptbase alongside this repo and runs its
+# offline validator (conceptbase/scripts/validate.py) against lpm.yaml and
+# every strands/*.yaml file -- the exact commands documented in this
+# repo's README under "Validating locally". See that script's own
+# docstring for why plain check-jsonschema doesn't work here (a still-open
+# common.defs.yaml $ref resolution gap on the conceptbase side).
+#
+# Pinned to conceptbase's main branch, not a tagged release -- there's no
+# versioned schema release yet (Phase 1), so this intentionally tracks
+# whatever the schemas currently are, same as this repo's own
+# conceptbase.vocabularies pin already assumes.
+
+on:
+  pull_request:
+    paths: ["lpm.yaml", "strands/**", ".github/workflows/validate.yml"]
+  push:
+    branches: [main]
+    paths: ["lpm.yaml", "strands/**", ".github/workflows/validate.yml"]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          path: oe-interdisciplinary-k12
+      - uses: actions/checkout@v7
+        with:
+          repository: openevo-ccs/conceptbase
+          path: conceptbase
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - run: pip install pyyaml jsonschema referencing
+
+      - name: Validate lpm.yaml and strand files
+        run: |
+          set +e
+          overall=0
+          run() { echo "::group::$*"; python conceptbase/scripts/validate.py "$@" || overall=1; echo "::endgroup::"; }
+
+          run conceptbase/schemas/lpm.schema.yaml oe-interdisciplinary-k12/lpm.yaml
+          run conceptbase/schemas/strand.schema.yaml oe-interdisciplinary-k12/strands/*.yaml
+
+          exit $overall

@@ -1,5 +1,7 @@
 # oe-interdisciplinary-k12
 
+[![Validate](https://github.com/openevo-ccs/oe-interdisciplinary-k12/actions/workflows/validate.yml/badge.svg)](https://github.com/openevo-ccs/oe-interdisciplinary-k12/actions/workflows/validate.yml)
+
 A K-12 cross-disciplinary Learning Progression Model (LPM) — biology, social studies, and computer science — built as a reference/pilot implementation of the [OpenEvo Concept Base (OECB)](https://github.com/openevo-ccs/conceptbase).
 
 **Status:** draft / Phase 1 pilot (`status: proposed` in [`lpm.yaml`](lpm.yaml)) — not a finished curriculum, a worked example of how a dependent repository is built against OECB.
@@ -33,6 +35,8 @@ Every strand file validates against OECB's `schemas/strand.schema.yaml`, and `lp
 python scripts/validate.py schemas/lpm.schema.yaml ../oe-interdisciplinary-k12/lpm.yaml
 python scripts/validate.py schemas/strand.schema.yaml ../oe-interdisciplinary-k12/strands/*.yaml
 ```
+
+**This runs automatically, too:** [`.github/workflows/validate.yml`](.github/workflows/validate.yml) checks out `conceptbase`'s `main` branch alongside this repo and runs these exact two commands on every PR (and on push to `main`) — the badge at the top of this README reflects the latest run. It's schema validation only, not full pin/deprecation checking (that's still Phase 4 upstream, see [conceptbase's Roadmap](https://github.com/openevo-ccs/conceptbase#roadmap)) — but it means a strand file that stops validating gets caught before merge, not whenever someone happens to run the command by hand.
 
 ## License
 
