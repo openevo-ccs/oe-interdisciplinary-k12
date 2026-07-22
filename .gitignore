@@ -1,0 +1,11 @@
+# oe-interdisciplinary-k12 is a curriculum-content repo (strands/, lpm.yaml) —
+# no build system, no code artifacts. Just editor/OS noise.
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Defense in depth, even though this repo has no known .env use today.
+.env
+.env.*
